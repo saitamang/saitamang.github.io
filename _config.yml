@@ -1,11 +1,7 @@
 # The Site Configuration
 
-# Import the theme
 theme: jekyll-theme-chirpy
-
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
+baseurl: ''
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
@@ -21,9 +17,7 @@ tagline: A mere human practice in Cyber Security # it will display as the subtit
 description: >- # used by seo meta and the atom feed
  A mere human practice in Cyber Security.
 
-# Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://saitamang.github.io"
+url: 'https://saitamang.github.io'
 
 github:
   username: saitamang # change to your GitHub username
@@ -40,9 +34,9 @@ social:
     # The first element serves as the copyright owner's link
     - https://twitter.com/mang_saitamang # change to your Twitter homepage
     - https://github.com/saitamang # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://huntr.com/users/saitamang
+    - https://packetstormsecurity.com/files/author/16385/
+    - https://github.com/saitamang/POC-DUMP/tree/main
 
 # Site Verification Settings
 webmaster_verifications:
@@ -97,6 +91,7 @@ theme_mode: # [light | dark]
 # e.g. 'https://cdn.com'
 #cdn: "https://chirpy-img.netlify.app"
 
+img_cdn:
 # the avatar on sidebar, support local or CORS resources
 avatar: "https://avatars.githubusercontent.com/saitamang"
 
@@ -192,6 +187,14 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
 sass:
   style: compressed
@@ -213,6 +216,11 @@ exclude:
   - README.md
   - LICENSE
   - "*.config.js"
+  - package*.json
+  - tools
+  - CHANGELOG.md
+  - gulpfile.js
+  - node_modules
   - package*.json
 
 jekyll-archives:
